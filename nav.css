@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gothic A1";
+}
+
+body {
+  background-color: #121316;
+  --nav-height: 120px;
+}
+
+body::-webkit-scrollbar {
+  background-color: #343539;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #666871;
+}
+
+.nav {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: none;
+}
+
+.nav__link {
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 0 1em;
+  font-size: 1.15em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-logo {
+  height: 50px;
+  width: 50px;
+  background-color: aliceblue;
+  margin-left: 30px;
+}
+
+.nav-right {
+  margin-right: 30px;
+}
+
+.button-started {
+  background-color: #5b53ff;
+  width: 150px;
+  border-radius: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.nav-center {
+  display: flex;
+}
+
+.story-dropdown-title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.story-dropdown-title span {
+  margin-right: 10px;
+}
+
+.nav-icons {
+  display: none;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-center {
+    display: none;
+  }
+  .button-started {
+    width: 120px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .nav-icons {
+    display: block;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+}
